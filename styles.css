@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+  background: #d0d0d3;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+img {
+  border: 3px #fff solid;
+}
+h2 {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #dbdada;
+  padding: 5px 40px;
+}
+header h1 {
+  grid-column: span 6;
+}
+header nav {
+  grid-column: span 6;
+  align-self: center;
+  justify-self: end;
+}
+header nav a {
+  margin-left: 30px;
+  color: #333;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 10px;
+}
+.welcome {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 150px;
+  border-bottom: 1px #b9b7b7 solid;
+  padding-bottom: 40px;
+}
+.welcome .text {
+  grid-column: span 2;
+  align-self: center;
+  justify-self: center;
+}
+.welcome .text p {
+  font-size: 25px;
+}
+.welcome img {
+  grid-column: span 1;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.about {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px #b9b7b7 solid;
+  padding-bottom: 40px;
+}
+.about img {
+  height: 400px;
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  align-content: center;
+}
+.about .text {
+  text-align: center;
+}
+
+.projects {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  padding-bottom: 40px;
+  border-bottom: 1px #b9b7b7 solid;
+}
+.projects h2 {
+  grid-column: span 12;
+  text-align: center;
+}
+.projects img {
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.project {
+  grid-column: span 4;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.project a {
+  margin-left: 30px;
+  color: #333;
+}
+.project a:hover {
+  color: #fff;
+}
+
+.skills {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px #b9b7b7 solid;
+}
+.skills h2 {
+  grid-column: span 12;
+  text-align: center;
+}
+.skills .text-box {
+  grid-column: span 3;
+  text-align: center;
+  margin: 1px 45px;
+  padding: 1px 25px;
+  border: 3px #dbdada solid;
+  border-radius: 90px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.text-box p {
+  padding: 10px 0;
+  border-radius: 90px;
+  margin: 5px 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  padding-bottom: 40px;
+  border-bottom: 1px #b9b7b7 solid;
+}
+.contact h2 {
+  grid-column: span 12;
+  text-align: center;
+  padding: 0;
+}
+.contact p {
+  grid-column: span 12;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.contact form {
+  grid-column: 6;
+  text-align: center;
+  justify-content: center;
+}
+input {
+  margin: 20px 0;
+  width: 245px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+}
+textarea {
+  border: none;
+  border-radius: 20px;
+}
+button {
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  background: #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  grid-column: span 12;
+  text-align: center;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1150px) {
+  main {
+    max-width: 980px;
+  }
+  .about img {
+    height: 350px;
+    width: 400px;
+  }
+  .project img {
+    height: 200px;
+  }
+  .skills .text-box {
+    margin: 1px 25px;
+  }
+}
+@media screen and (max-width: 980px) {
+  main {
+    max-width: 850px;
+  }
+  header nav a {
+    margin-left: 20px;
+  }
+  .welcome {
+    gap: 20px;
+  }
+  .about {
+    gap: 50px;
+  }
+  .projects {
+    grid-template-columns: 1fr;
+  }
+  .projects h2 {
+    grid-column: span 1;
+  }
+  .project {
+    grid-column: span 1;
+    margin: 20px 30px;
+  }
+  .project img {
+    height: 300px;
+    width: 500px;
+  }
+  .skills .text-box {
+    margin: 1px 20px;
+  }
+}
+@media screen and (max-width: 980px) {
+  main {
+    max-width: 750px;
+  }
+  header nav a {
+    margin-left: 15px;
+  }
+  .about {
+    grid-template-columns: 1fr;
+    gap: 0;
+    justify-items: center;
+  }
+  .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .skills h2 {
+    grid-column: span 4;
+  }
+  .skills .text-box {
+    grid-column: span 2;
+  }
+  .contact {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .contact h2 {
+    grid-column: span 5;
+    text-align: center;
+  }
+  .contact form {
+    grid-column: 3 / span 1;
+  }
+}
+@media screen and (max-width: 750px) {
+    main {
+      max-width: 600px;
+    }
+    header {
+        padding: 10px 15px;
+    }
+    header h1 {
+        grid-column: span 1;
+        font-size: 20px;
+        align-self: center;
+    }
+    header nav {
+        grid-column: 2 / span 11 ;
+        justify-self: end;
+    }
+    header nav a {
+        margin-left: 15px;
+        font-size: 15px;
+      }
+    .project {
+        padding: 10px 0px;
+    }
+    .project img {
+        width: 300px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 500px) {
+    main {
+      max-width: 300px;
+      margin: 30px
+    }
+    header {
+        padding: 5px 15px;
+    }
+    header h1 {
+        font-size: 15px;
+    }
+    header nav {
+        grid-column: 2 / span 10 ;
+    }
+    header nav a{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .welcome .text p {
+        font-size: 15px;
+    }
+    .welcome img {
+        width: 50px;
+        height: 50px;
+    }
+    .about img {
+        width: 100px;
+        height: 100px;
+    }
+    .project {
+        max-width: 250px;
+        justify-self: center;
+    }
+    .project img {
+        width: 100px;
+        height: 100px;
+    }
+    .skills {
+        grid-template-columns: 1fr;
+    }
+    .skills h2 {
+        grid-column: 1;
+    }
+    .skills .text-box {
+        grid-column: 1;
+        padding: 20px;
+    }
+    .contact {
+        grid-template-columns: 1fr;
+        margin: 30px;
+    }
+    .contact h2 {
+        grid-column: 1;
+    }
+    .contact form {
+        grid-column: 1;
+    }
+}
